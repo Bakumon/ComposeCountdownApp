@@ -70,9 +70,7 @@ fun Countdown(onClick: () -> Unit = {}) {
                     TimeBox(true, viewModel.minutes)
 
                     TimeBox(false, viewModel.seconds)
-
                 }
-
             }
         }
     )

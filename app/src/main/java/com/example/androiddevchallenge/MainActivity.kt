@@ -34,14 +34,17 @@ class MainActivity : AppCompatActivity() {
         setContent {
             MyTheme {
                 Countdown {
-                    handler.postDelayed(object : Runnable {
-                        override fun run() {
-                            viewModel.startCountDown()
-                            if (viewModel.isRunning) {
-                                handler.postDelayed(this, 1000)
+                    handler.postDelayed(
+                        object : Runnable {
+                            override fun run() {
+                                viewModel.startCountDown()
+                                if (viewModel.isRunning) {
+                                    handler.postDelayed(this, 1000)
+                                }
                             }
-                        }
-                    }, 1000)
+                        },
+                        1000
+                    )
                 }
             }
         }

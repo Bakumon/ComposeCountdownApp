@@ -45,5 +45,4 @@ class MainViewModel : ViewModel() {
 
         isRunning = current > 0
     }
-
 }
